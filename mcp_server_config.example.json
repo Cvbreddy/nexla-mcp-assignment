@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "nexla-pdf-qa": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "nexla_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "src"
+      }
+    }
+  }
+}

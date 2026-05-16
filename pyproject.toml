@@ -1,0 +1,24 @@
+[project]
+name = "nexla-mcp-assignment"
+version = "0.1.0"
+description = "Local-only MCP server for grounded PDF question answering."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp[cli]>=1.27.1,<2.0.0",
+  "pypdf>=6.0.0,<7.0.0",
+]
+
+[project.scripts]
+nexla-mcp-server = "nexla_mcp.server:main"
+nexla-mcp-smoke-test = "nexla_mcp.smoke_test:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
